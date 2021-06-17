@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CHECK WEBSITE ONLINE</title>
+
+<style>
+.none{
+  display:none;
+}
+h1 {
+    font-size: 35px;
+    margin: auto;
+}
+h2.titleStatus {
+    margin-top: 0;
+}
+img {
+    width: inherit;
+}
+.center{
+  text-align: center;
+}
+.areaContent {
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 0 2px 0px black;
+    display: flow-root;
+    padding: 0 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.main1 {
+    width: 69%;
+    float: left;
+    padding: 5px;
+    padding-top: 0;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.main2 {
+    color: black;
+    float: left;
+    width: 28%;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.areaPanelHome {
+    text-align: center;
+    background-color: #3ccf3c;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 1px black;
+    padding-bottom: 10px;
+    width: 75%;
+    margin: auto;
+}
+.titlePanelHome {
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#inputLinkChecker {
+    width: 90%;
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0;
+    outline: none;
+    border-radius: 25px;
+}
+#getCheckUrlDomain {
+    padding: 5px 50px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+#notifCheck {
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.areaOutput {
+    text-align: center;
+}
+
+.areaSubOutput {
+    background-color: white;
+    color: black;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0px #19192f;
+    margin-bottom: 10px;
+}
+.areaSubOutput1 {
+    background-color: white;
+    color: black;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0px #19192f;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.titleStatus {
+    margin-bottom: 5px;
+    background-color: #3efdff4d;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: inset 0 0 2px 1px #dfdfee;
+    text-align: left;
+}
+#PA {
+    margin: 5px 0;
+    display: inline-block;
+    font-size: 30px;
+}
+
+#KKH{
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flow-root;
+}
+.sub1 {
+    margin-top: 7px;
+    text-align: left;
+    display: flex;
+    background-color: white;
+    width: fit-content;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.sub2 {
+    margin-top: 7px;
+    text-align: left;
+    display: flex;
+    width: fit-content;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    float: left;
+    margin-right: 5px;
+}
+.titleSub1 {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    padding: 5px 15px;
+    color: black;
+    white-space: pre;
+    vertical-align: middle;
+    display: block;
+    align-self: center;
+}
+.titleSub2 {
+    font-size: 18px;
+    font-weight: 200;
+    background-color: #94d4c394;
+    padding: 5px 15px;
+    color: black;
+    white-space: pre;
+    vertical-align: middle;
+    display: block;
+    align-self: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.contentSub1 {
+    font-size: 15px;
+    background-color: #dcc9c9;
+    padding: 5px 10px;
+    border-left: 5px solid #008c5f;
+    position: relative;
+    word-break: break-word;
+    width: -webkit-fill-available;
+}
+.contentSub2 {
+    font-size: 14px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    position: relative;
+    word-break: break-word;
+    align-self: center;
+    width: -webkit-fill-available;
+    text-align: center;
+    font-weight: 700;
+    color: green;
+    max-width: fit-content;
+}
+
+.contentSub3 {
+    font-size: 15px;
+    background-color: #dcc9c9;
+    padding: 5px 10px;
+    border-left: 2px solid #5e6361;
+    position: relative;
+    word-break: break-word;
+    width: -webkit-fill-available;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.countKeyword {
+    font-size: 20px;
+    width: max-content;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+#MT,#UDDH {
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    background-color: white;
+}
+.titleMeta {
+    background-color: #c5ccd3;
+    border: 1px solid #000a0a;
+    text-align-last: center;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #8f9494;
+    box-shadow: 0 0 2px 0px #dfdfee;
+}
+td.dbMeta {
+    position: relative;
+    word-break: break-word;
+    width: -webkit-fill-available;
+}
+td.titleSubMeta {
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    word-break: break-word;
+    width: -webkit-fill-available;
+}
+.areaBoxSidebar {
+    position: relative;
+    width: 104%;
+    background-color: #ffffff;
+}
+
+#refrehDomain {
+    cursor: pointer;
+    margin: auto;
+    outline: none;
+    font-size: 15px;
+}
+#urlDomain {
+    font-size: 30px;
+    font-weight: 600;
+}
+#imgPreview {
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0px black;
+    height: 300px;
+}
+.titleDomain {
+  display: inline-grid;
+  margin-bottom: 10px;
+}
+.titleRelated {
+    text-align: left;
+    display: flow-root;
+    border-bottom: 2px solid #00000094;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 29px;
+    width: max-content;
+}
+.areaTitleLI {
+    text-align: center;
+    border-bottom: 1px solid #00000024;
+    padding-bottom: 10px;
+    background-color: #d4d8d942;
+    margin-bottom: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 15px;
+}
+img.imgRelatedLink {
+    width: 65%;
+    height: 200px;
+    border-radius: 10px;
+}
+.LTI{
+  text-decoration: none;
+}
+.titleRelatedLink {
+    display: flow-root;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    margin: 5px;
+}
+.titleRelatedDesc {
+    text-align: left;
+    font-size: 15px;
+    margin: 5px;
+}
+span.timeRelated {
+    font-weight: 700;
+    margin: 5px;
+    font-size: 13px;
+}
+.relatedTime {
+    text-align: left;
+    margin: 5px;
+}
+@media screen and (max-width: 800px) {
+  .areaPanelHome {
+    width: 100%;
+  }
+  .main1, .main2 {
+    width: inherit;
+    float: none;
+    margin-left: 0px;
+    box-shadow: none;
+    padding: 0;
+    margin: auto;
+  }
+  .areaContent {
+    width: 100%;
+    margin: auto;
+    box-shadow: none;
+    display: flow-root;
+    padding: 0;
+    border-radius: 0;
+    margin-top: 10px;
+  }
+  .areaBoxSidebar {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+  }
+}
+</style>
+
+  </head>
+  <body>
+    <div class="areaPanelHome">
+      <div class="titlePanelHome"><h1>Check Website Online</h1></div>
+      <div><input id="inputLinkChecker" placeholder="insert link ..."/></div>
+      <div><button id="getCheckUrlDomain">CHECK</button></div>
+      <div id="notifCheck" class="none">Please Wait....</div>
+    </div>
+    <div class="areaContent">
+      <div class="main1">
+        <div class="areaOutput">
+          <div class="areaSubOutput">
+            <h2 class="titleStatus">Alexa Rank</h2>
+            <div id="PA">-</div>
+          </div>
+
+          <div class="areaSubOutput1">
+            <h2 class="titleStatus">Keyword Page</h2>
+            <div id="KKH">-</div>
+          </div>
+
+          <div class="areaSubOutput">
+            <h2 class="titleStatus">META TAG</h2>
+            <div id="MT">
+              <table>
+                <tbody id="dbMT"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="areaSubOutput">
+            <h2 class="titleStatus">Url in Page</h2>
+            <div id="UDDH">
+              <table>
+                <tbody id="dbUUDH"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main2">
+          <div class="areaBoxSidebar">
+            <img src="https://1.bp.blogspot.com/-zzqvnuiWosM/XZ3Du3EECyI/AAAAAAAAEmc/5geobv3me9cN_FA5Om9m1xml43YofoT3QCLcBGAsYHQ/s1600/iklan%2B1.jpg"/>
+          </div>
+           <div class="areaBoxSidebar">
+            <div class="titleRelated">Related Search</div>
+            <div id="relatedSearch"></div>
+          </div>
+      </div>
+    </div>
+
+<script>
+
+document.getElementById('inputLinkChecker').value="www.bloggerbyte.net";
+
+function run(data){
+  var dataUrl = data;
+  if (dataUrl.indexOf("http://") >= 0 || dataUrl.indexOf("https://") >= 0) {
+      dataUrl = dataUrl;
+  } else {
+      dataUrl = "http://" + dataUrl
+  }
+  document.getElementById("KKH").innerHTML="Please Wait...";
+  document.getElementById("PA").innerHTML="Please Wait...";
+  document.getElementById("dbUUDH").innerHTML="Please Wait...";
+  document.getElementById("dbMT").innerHTML="Please Wait...";
+  document.getElementById("relatedSearch").innerHTML="Please Wait...";
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/", true);
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+          if (xhr.status == 200) {
+              var db = JSON.parse(xhr.responseText);
+
+              if(db.status=="ok"){
+                var alexa=db.data["ALEXA-RANK"];
+                if(alexa=="false"){
+                    document.getElementById("PA").innerHTML=0;
+                } else {
+                document.getElementById("PA").innerHTML=alexa.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+                };
+
+                var keyword=db.data["KEYWORD"];
+                var dbKeyword=[];
+                for(var i=0;i<keyword.length;i++){
+                  dbKeyword.push(Object.keys(keyword[i])[0])
+                };
+                //dbKeyword=dbKeyword.reverse();
+                //keyword=keyword.reverse();
+                var domKeyword="";
+                var countKeyword=0;
+                for(var i=0;i<dbKeyword.length;i++){
+                  var isiKeyword=dbKeyword[i].replace(/\u00a0/g, "").replace(/\n/g,"").replace(/ /g,"").replace(/\t/g, '');
+                  if(isiKeyword.split("").length>0){
+                    countKeyword=countKeyword+1;
+                    domKeyword=domKeyword+`<div class="sub2"><span class="titleSub2">`+isiKeyword+`</span><code class="contentSub3">`+keyword[i][dbKeyword[i]]+`</code></div>`;
+                  };
+                };
+                document.getElementById("KKH").innerHTML=`<div class="countKeyword">Jumlah Keyword : `+countKeyword+`</div>`+domKeyword;
+                countKeyword=0;
+
+
+                var linkBody=db.data["LINK-BODY"].links;
+                var dbLinkBody=[];
+                for(var i=0;i<linkBody.length;i++){
+                  dbLinkBody.push(Object.keys(linkBody[i]))
+                };
+                var domLinkBody="";
+                for(var i=0;i<dbLinkBody.length;i++){
+                  var dburl=dbLinkBody[i][0];
+                  var dbstatus=dbLinkBody[i][1];
+                  var dbstate=dbLinkBody[i][2];
+                  var getDbUrl=linkBody[i][dburl];
+                  var getDbStatus=linkBody[i][dbstatus];
+                  var getDbState=linkBody[i][dbstate];
+
+                  domLinkBody=domLinkBody+`<tr>
+                    <td class="titleSubMeta">`+getDbUrl+`</td>
+                    <td class="dbMeta center">`+getDbStatus+`</td>
+                  </tr>`;
+                  countKeyword=countKeyword+1;
+                };
+                document.getElementById("dbUUDH").innerHTML=`<tr class="titleMeta">
+                  <th class="titleSubMeta">URL</th>
+                  <th class="dbMeta">STATUS</th>
+                </tr>`+domLinkBody;
+                countKeyword=0;
+                
+                var metaTags=db.data["JSON-LTD"].metatags;
+                var dbMetaTags=Object.keys(metaTags);
+                var dbMeta=""
+                for(var i=0;i<dbMetaTags.length;i++){
+                  var nameMeta = dbMetaTags[i];
+                  var valuMeta=metaTags[nameMeta].join("<br/><br/>");
+                  dbMeta=dbMeta+`<tr>
+                    <td class="titleSubMeta">`+nameMeta+`</td>
+                    <td class="dbMeta">`+valuMeta+`</td>
+                  </tr>`;
+                };
+                document.getElementById("dbMT").innerHTML=`<tr class="titleMeta">
+                  <th class="titleSubMeta">Attribute Meta</th>
+                  <th class="dbMeta">Value Meta</th>
+                </tr>`+dbMeta;
+                //console.log(  )
+
+                domRelatedku(JSON.parse(db.data["RELATED"]))
+                console.log(JSON.parse(xhr.responseText));
+              } else {
+                document.getElementById("KKH").innerHTML="-";
+                document.getElementById("UDDH").innerHTML="-";
+                document.getElementById("PA").innerHTML="-";
+              };
+          };
+      };
+  };
+  xhr.onerror = function () {
+      console.log("error");
+      document.getElementById('getCheckUrlDomain').click();
+  };
+  xhr.send(JSON.stringify({
+      "data": dataUrl,
+  }));
+}
+
+document.getElementById('getCheckUrlDomain').addEventListener('click', function () {
+    run(document.getElementById('inputLinkChecker').value);
+});
+
+var dbRelated=${related};
+domRelatedku(dbRelated)
+function domRelatedku(data){
+  var related=data;
+  var listRelatedUrl=related.url;
+  var listRelatedTime=related.time;
+  var listRelatedTitle=related.title;
+  var domRelated="";
+  for(var i=0;i<listRelatedUrl.length;i++){
+    domRelated=domRelated+`<div class="areaTitleLI">
+      <a class="LTI" target="_blank" href="/site/`+listRelatedUrl[i]+`"><img class="imgRelatedLink" src="https://cdn.statically.io/screenshot/full=true/www.bloggerbyte.net" alt="SITE - `+listRelatedUrl[i]+`"><span class="titleRelatedLink">`+listRelatedUrl[i]+`</span></a>
+      <div class="titleRelatedDesc">`+listRelatedTitle[i]+`</div>
+      <div class="relatedTime">Time : <span class="timeRelated">`+listRelatedTime[i]+`</span></div>
+    </div>`;
+  };
+  document.getElementById("relatedSearch").innerHTML=domRelated;
+  domRelated="";
+};
+</script>
+
+  </body>
+</html>
